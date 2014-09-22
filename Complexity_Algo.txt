@@ -1,0 +1,23 @@
+Algorithms
+
+- set of steps to do something or solve some problem
+al-kwarismi
+
+English language version description of steps
+
+
+SEARCH
+- how do I store my data?
+- what algorithm to find it?
+
+- linear search (start 0th element)
+- check array value at index
+- if it matches we're done
+-otherwise increment index +=1
+- go back to step 2
+
+ITERATION
+
+Models of Computation
+
+Random Access Machine
