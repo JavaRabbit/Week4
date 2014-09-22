@@ -21,7 +21,7 @@ describe FizzbuzzOf do
 
     context "when divs by 3 and 5" do
       it "returns FizzBuzz" do
-        expect(FizzbuzzOf.new(15).string).to eq "FizzBuzz"
+        expect(FizzbuzzOf.new(15).fizz_checker).to eq "FizzBuzz"
       end
     end
 
