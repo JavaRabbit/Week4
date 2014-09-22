@@ -1,0 +1,3 @@
+class FizzbuzzOf
+
+end
