@@ -41,13 +41,13 @@ class Scrabble
 
     # iterate through the 'array' and push the word and score into the hash
     array.each {|x|
-      # puts "The word #{x} is worth #{score(x)} points"
-      # hash = {:item1 => 1}
-      # hash[:item2] = 2
-
-
-
+      score_hash[x] = score(x) # this puts the key and value pair into the hash
     }
+
+    #return the word with the highest value
+    max_record = score_hash.max { |a,b| a.last <=> b.last }
+    max_index = max_record && max_record.first #max_index is the key that is correlated to the highest value
+    puts max_index
   end
 
 end
