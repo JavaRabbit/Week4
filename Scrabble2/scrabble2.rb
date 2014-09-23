@@ -30,8 +30,24 @@ class Scrabble
 
     #puts "the sum of your word is #{theSum} points!"
     theSum #this returns theSum as the last thing
+  end
+
+  # this method returns the highest score from an array of words
+  # the argument for this array is an array
+
+  def highest_score_from(array_of_words)
+    array = ["cat", "dog", "rabbit"]
+    score_hash = Hash.new
+
+    # iterate through the 'array' and push the word and score into the hash
+    array.each {|x|
+      # puts "The word #{x} is worth #{score(x)} points"
+      # hash = {:item1 => 1}
+      # hash[:item2] = 2
 
 
+
+    }
   end
 
 end
