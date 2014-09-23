@@ -36,7 +36,7 @@ class Scrabble
   # the argument for this array is an array
 
   def highest_score_from(array_of_words)
-    array = ["cat", "dog", "rabbit"]
+    array = ["cat", "dog", "rabbit", "bananas"]
     score_hash = Hash.new
 
     # iterate through the 'array' and push the word and score into the hash
@@ -47,7 +47,7 @@ class Scrabble
     #return the word with the highest value
     max_record = score_hash.max { |a,b| a.last <=> b.last }
     max_index = max_record && max_record.first #max_index is the key that is correlated to the highest value
-    puts max_index
+    max_index
   end
 
 end
