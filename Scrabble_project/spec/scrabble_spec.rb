@@ -3,9 +3,9 @@ require './scrabble'
 describe Scrabble do #this probably is asking for class named Scrabble in scrabble.rb
 
 
-  describe "first test to return 1" do
+  describe "#method1" do  # the # sign is there to specify to only test method1
     it "returns 1" do
-      expect(Scrabble.new(1).method1).to eq 1
+      expect(Scrabble.new("1").method1).to eq 1
     end
   end
 

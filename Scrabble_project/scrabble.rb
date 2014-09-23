@@ -3,6 +3,8 @@
 
 class Scrabble # this makes the line 'describe Scrabble do' happy!
 
+  # there needs to be check in initialize to tell if the argument
+  # is a word or array of words
   def initialize(theWord)
     @theWord = theWord
     #getWord
