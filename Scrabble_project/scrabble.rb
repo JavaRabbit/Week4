@@ -7,7 +7,9 @@ class Scrabble # this makes the line 'describe Scrabble do' happy!
     @theWord = theWord
     #getWord
     #testHash
+    @theArray = Array.new # this is an array to hold the chars from the word
     splitString
+    printValue #call this method to print the value
   end
 
   def method1
@@ -22,24 +24,34 @@ class Scrabble # this makes the line 'describe Scrabble do' happy!
   "v"=>4, "w"=>4, "x"=>8, "y"=>4, "z"=>10, " "=>0] # @@ because class variable
 
   # this method gets word from user
-  def getWord
-     puts "The word you entered is #{@theWord}"
-     #puts "this is getting to the hash #{@@letters['a']}"  # this line breaks the test
-  end
+  # def getWord
+  #    #puts "The word you entered is #{@theWord}"
+  #    #puts "this is getting to the hash #{@@letters['a']}"  # this line breaks the test
+  # end
 
   # this method tests the hash that it can get a value out of the hash
   def testHash
-     puts "this is getting to the hash #{@@letters['k']}"
+     #puts "this is getting to the hash #{@@letters['k']}"
   end
 
-  # method to split the word @n to chars
+  #method to split the word @n to chars
   def splitString
-    puts @theWord.chars.to_a
+    @theArray = @theWord.chars.to_a
+    puts @theArray
   end
 
+  # this method will iterate over @theArray, and will add up the values of the letters
+  def printValue
+    theSum = 0 # a local variable that will record the sum
 
+    #iterate over the array
+    @theArray.each {|x|
+      puts " letter #{x} is worth #{@@letters[x]} points"
+      theSum += @@letters[x]
+    }
 
+    puts "the sum of your word is #{theSum} points!"
+  end
 
-  # Create a hash with letter and assigned value
 
 end

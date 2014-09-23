@@ -9,11 +9,11 @@ describe Scrabble do #this probably is asking for class named Scrabble in scrabb
     end
   end
 
-  describe "testing of method getWord" do
-    it "returns a string with the word" do
-      expect(Scrabble.new("test_word").getWord).to eq "The word you entered is test_word"
-    end
-  end
+  # describe "testing of method getWord" do
+  #   it "returns a string with the word" do
+  #     expect(Scrabble.new("test_word").getWord).to eq "The word you entered is test_word"
+  #   end
+  # end
 
 
 
