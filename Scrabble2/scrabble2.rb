@@ -39,15 +39,41 @@ class Scrabble
     array = ["cat", "dog", "rabbit", "bananas"]
     score_hash = Hash.new
 
-    # iterate through the 'array' and push the word and score into the hash
+    # iterate through the array and push the word and score into the hash
     array.each {|x|
       score_hash[x] = score(x) # this puts the key and value pair into the hash
     }
 
     #return the word with the highest value
-    max_record = score_hash.max { |a,b| a.last <=> b.last }
-    max_index = max_record && max_record.first #max_index is the key that is correlated to the highest value
-    max_index
+    # max_record = score_hash.max { |a,b| a.last <=> b.last }
+    # puts max_record
+    # max_index = max_record && max_record.first #max_index is the key that is correlated to the highest value
+    # max_index
+
+    max = score_hash.values.max # this code finds and stores the max score
+    #puts "the max score is #{max} points"
+
+    # now find the key(s) that have that max score, and put it into a new hash
+
+    max_hash = Hash.new # this is a new hash to store k/v pairs that have the max score
+
+    #the code below prints the score of each item of the array
+    # array.each {|x|
+    #   puts score(x)
+    # }
+
+    # this score iterates over the array, and if the score value is equal
+    #to the max value, the put the k/v pair into the max_hash
+    array.each{ |x|
+      if score(x) == max
+        max_hash[x] = score(x)
+      end
+    }
+    #puts max_hash
+
+  # now compare the length of the keys of max_hash  and return the shortest key
+
+
   end
 
 end

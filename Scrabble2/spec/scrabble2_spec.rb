@@ -26,7 +26,7 @@ describe Scrabble do
   #this tests where the highest_score_from(array_of_words) is correct
   context "return the correct key" do
     it "returns the correct key" do
-      expect(Scrabble.new.highest_score_from(1)).to eq "bananas"
+      expect(Scrabble.new.highest_score_from(1)).to eq "rabbit"
     end
   end
 
