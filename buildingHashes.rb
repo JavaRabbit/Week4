@@ -10,5 +10,6 @@ theHash = Hash.new
 original_str.split('&').each do |item|
 
   puts item.split("=")
+  # to put things into a hash theHash[x] = y
 
 end
