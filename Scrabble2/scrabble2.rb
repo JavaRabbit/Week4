@@ -73,7 +73,15 @@ class Scrabble
 
   # now compare the length of the keys of max_hash  and return the shortest key
 
-
+  #or if max_hash size is 1, just return the key
+  theKey = "" # declare a string that will be used to store the key
+  max_hash.each do |key, value|
+    puts key
   end
+
+  #if max_hash size > 1 then return the key with the shortest value
+
+
+  end  # end of def highest_score_from
 
 end
