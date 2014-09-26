@@ -1,0 +1,39 @@
+Regular Expressions
+
+Regular expression is a pattern that string matches or doesn't match.
+
+/RegularExpression/  (this is how to make a regex)
+
+What can you do with regex
+
+Test (see if it's in there)
+
+Extract (extract a portion)
+
+Change (change and replace a portion of a string)
+
+// Testing a string
+
+"Use the force"
+/force/ =~ "use the force"
+
+=~  (the operator, basic matching operator for ruby)
+(this returns a number locatoin where it matches)
+
+/dark side/ !~ "Use the force"
+returns true if not in the regular expression
+
+// MatchData class (included in ruby)
+string = "The force will be with you always"
+
+m = /force/.match(string)
+=> #<MatchData "force">
+
+m.to_s =>"force"
+
+m.pre_match =>"The "   (this returns the portion of the string before
+the match)
+space is significant in regular expressions
+
+m.post_match
+=> " will be with you always"
