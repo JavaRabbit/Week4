@@ -37,3 +37,119 @@ space is significant in regular expressions
 
 m.post_match
 => " will be with you always"
+
+//Email
+
+Rubular (a ruby regular expression editor)
+use pipe character (alternation) to provide alternate options
+Alternation
+/nell | renee /
+
+metacharacter
+. any single character
+* character can appear any number of times
+
+/.*/   this will match anything!
+
+.*@.*\..*   (this is good for emails)
+
+//Range
+specify a range of number or letters
+[a-d] [1-4]  this is inclusive
+
+[a-z]*@[a-z]*\.[a-z]*
+
+to add to range [a-zA-Z]   or [a-zA-Z0-9]
+
+\w   stands for any word character, same as [a-zA-Z0-9_]  (notice the underscore)
+\w*@\w*\.\w*
+
++ character must appear one or more times
+\w+@\w+\.\w+
+
+//  Extracting Strings
+\d stands for any digit same as [0-9]
+\d{3}  looks for exactly 3 digits
+eg.  206-\d{3}-\d{4}
+
+for phone numbers, lets make hyphen optional
+? makes a character optional
+206-?\d{3}-?\d{4}
+
+// Changing a string
+sub method
+sub uses 2 arguments, regex and text that will be used to replace
+sub(/regex/,"text")
+
+string = "Renee is presenting. Renee is talkig about regex"
+new = string.sub(/Renee/, "Nell")
+(this only changes the First match for what it finds)
+
+To replace all the matches
+gsub(/regex/,"text")   (g stands for global)
+
+ gsub!(/regex/,"text")   the bang replaces the old string.
+
+ twitter handle @nellshamrell
+ nellshamrell@gmail.com
+
+ \(?206\)?-?\d{3}-?\d{4}    parentheses must be escapped
+
+ // Case sensitive
+ string = "aaaAAA"
+ regex = /aaaaaa/
+ regex.match(string)
+ (this returns nil)
+
+ regex = /aaaaaa/i
+
+
+ ^ (the carret is for the beginning of the line )
+
+
+ Onigmo engine below is actually doing the work
+ is a fork of Oniguruma
+
+
+ Finite State Machine
+ State - the dog is only in the house, or outside the house, 2 states
+ Finite - is finite. only 2 finite states
+  Multiple state- eg the dog is in the door, so half in and out of the house
+
+  re = /force/
+  string = "use the force"
+
+  The u is first matched with 'force'
+  when the f in the string is matched with f in /f.../ It's a match!
+
+  Alternation
+  /Y(olk | oda)/   it can match either Yolk or Yolk
+  multiple paths
+  It tries the left most first
+  It saves a place to go back to (trees???)
+
+  Quantifiers
+  /No+/
+
+  Greedy quantier - will keep looking as long as there is more string to match.
+  Gq uses maximum effort for maximum return
+
+  Lazy Quantifier - LQ matchs as little as possible
+  re = /No+/
+  string = "Noooo"
+  re.match(string)
+
+  star quantifer  /.*moon/
+
+  Backtracking is slow
+
+  Posessive Quantifier do not backtrack,
+  /No++w+/
+  PQ would rather fail rather than backtrack
+  saves money and time, fail it faster
+  use PQ with caution
+
+  snake_case to CamelCase
+  First find first latter of string and capitalize it
+
+  Look Aheads vs Look Behinds

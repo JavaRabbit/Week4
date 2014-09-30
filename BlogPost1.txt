@@ -1,0 +1,9 @@
+Welcome to my Ada blog!  
+
+I'm writing this on a late Sunday night, and it's the weekend after Week 4 of being in the Ada Developers Academy.  As a side note: for those ladies who are thinking of applying to the Ada Developers Academy, I 110% recommend it.  It will definitely change your life, and and will make you look at code in a way that learning through books and through classes just can't do.
+
+As we've sped along learning Ruby, git and using Github, Rspec, Railsbridge, and using different Ruby gems, I wanted to write about TDD, or test driven development.  Until Ada, I've never thought much about TDD. Or how much I'm strangely fascinated by it.  On one hand, it makes perfect sense, to make sure you have your requirements down before you begin to code.  On the other hand, coming from a biology background, this sounds so incredibly backwards.  Scientists usually don't formualte precise expectations from experiments, and then design experiments that meet these expectations and requirements. Scientists usually pride ourselves by following where the science takes us.  
+
+TDD and the developers who use it write acceptance tests first, then the code that makes the test pass. Then after the test passes, you refactor, thus you keep making small changes in the code that improves the code over time. 
+
+TDD sounds great, and I personally like it.  But since I'm only doing this for only a week, I don't honestly know all the pitfalls on this software development style.  One large glaring pitfall I do see, is that TDD only is as good the developer who uses it.  A so-so developer might not be using TDD optimally, and the code 
